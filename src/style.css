@@ -1,0 +1,10 @@
+html {
+  filter: invert(0.9) hue-rotate(180deg) !important;
+  background-color: white !important;
+}
+* {
+  color-scheme: none !important;
+}
+:where(img, video, image, [style*='background-image: url'], [style*='background: url']) {
+  filter: invert(1) hue-rotate(180deg) contrast(1.1);
+}

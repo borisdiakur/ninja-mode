@@ -1,0 +1,17 @@
+{
+  "name": "ninja-mode",
+  "description": "Extension to enable dark mode on selected websites in Chromium based browsers.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Boris Diakur (https://borisdiakur.de)",
+  "repository": "borisdiakur/ninja-mode",
+  "packageManager": "pnpm@7.9.5",
+  "devDependencies": {
+    "@types/chrome": "^0.0.212",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.32.0",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4"
+  }
+}

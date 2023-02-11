@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "ninja-mode",
+  "description": "Extension to enable dark mode on selected websites in Chromium based browsers.",
+  "version": "1.0",
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Toggle \"Ninja Mode\""
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
