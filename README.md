@@ -2,7 +2,8 @@
 
 Extension to enable dark mode on selected websites in Chromium based browsers.
 
-Installation:
+## Installation:
+
 1. Download the source code of this repository.
 2. In your browser go to [chrome://extensions/](chrome://extensions/) or [opera://extensions/](opera://extensions/) or use the `Cmd/Ctrl Shift E` shortcut.
 3. Enable the "Developer Mode".
