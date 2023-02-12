@@ -1,4 +1,4 @@
-<div align="center"><h1><img width="56" alt="" src="https://raw.githubusercontent.com/borisdiakur/ninja-mode/main/icons/icon128.png"> <div>Ninja Mode</div></h1></div>
+<div align="center"><h1><img width="56" alt="" src="https://raw.githubusercontent.com/borisdiakur/ninja-mode/main/icons/icon.svg"> <div>Ninja Mode</div></h1></div>
 
 <div align="center">
   <i>Dark mode enabled</i><br>
