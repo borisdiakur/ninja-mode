@@ -6,7 +6,15 @@
   "background": {
     "service_worker": "src/background.js"
   },
-  "permissions": ["tabs", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "js": ["src/content.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": ["tabs", "scripting"],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_icon": {
