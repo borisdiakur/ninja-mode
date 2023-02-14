@@ -33,7 +33,13 @@ function updateNinjaMode() {
   } else {
     removeNinjaMode()
   }
-  chrome.runtime.sendMessage({ action: 'ninja-status', data: ninjaModeEnabled })
+  chrome.runtime.sendMessage({
+    action: 'ninja-status',
+    data: {
+      enabled: ninjaModeEnabled,
+      hostname: location.hostname,
+    },
+  })
 }
 
 chrome.runtime.onMessage.addListener((msg) => {
