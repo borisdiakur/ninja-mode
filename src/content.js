@@ -14,7 +14,7 @@ function addNinjaMode() {
       filter: invert(0.9) hue-rotate(180deg) !important;
       color-scheme: dark !important;
     }
-    :is(img, video, image, [style*='background-image: url'], [style*='background: url']) {
+    :is(img:not([src$='.svg']), video, image, [style*='background-image: url'], [style*='background: url']) {
       filter: invert(1) hue-rotate(180deg) contrast(1.1) !important;
     }
   `
