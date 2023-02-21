@@ -9,6 +9,7 @@ function addNinjaMode() {
     }
     :where(html) {
       color: black;
+      background-color: white;
     }
     html {
       filter: invert(0.9) hue-rotate(180deg) !important;
