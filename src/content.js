@@ -15,7 +15,27 @@ function addNinjaMode() {
       filter: invert(0.9) hue-rotate(180deg) !important;
       color-scheme: dark !important;
     }
-    :is(img:not([src*='svg']), video, iframe, image, [style*='background-image: url']:not([style*='data:image/gif'], [style*='data:image/svg']), [style*='background: url']:not([style*='data:image/gif'], [style*='data:image/svg'])) {
+    :is(
+      img:not([src*='svg']),
+      video,
+      iframe[src*='youtube.'],
+      iframe[src*='twitter.'],
+      iframe[src*='vimeo.'],
+      iframe[src*='tiktok.'],
+      iframe[src*='facebook.'],
+      iframe[src*='instagram.'],
+      iframe[src*='imgur.'],
+      iframe[src*='flickr.'],
+      iframe[src*='twitch.'],
+      iframe[src*='giphy.'],
+      iframe[src*='ustream.'],
+      iframe[src*='hulu.'],
+      image,
+      [style*='background-image: url']:not([style*='data:image/gif'],
+      [style*='data:image/svg']),
+      [style*='background: url']:not([style*='data:image/gif'],
+      [style*='data:image/svg'])
+    ) {
       filter: invert(1) hue-rotate(180deg) contrast(1.1) !important;
     }
   `
