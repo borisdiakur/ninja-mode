@@ -49,6 +49,10 @@ function removeNinjaMode() {
 }
 
 function updateNinjaMode() {
+  if (window.location.href.startsWith('about:')) {
+    addNinjaMode()
+    return
+  }
   const ninjaModeEnabled = localStorage.getItem('ninja-mode')
   if (ninjaModeEnabled) {
     addNinjaMode()
