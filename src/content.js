@@ -17,7 +17,7 @@ function addNinjaMode() {
     }
     :is(
       img:not([src*='svg']),
-      [role="img"],
+      [role="img"]:not(:has(svg)),
       video,
       iframe[src*='youtube'],
       iframe[src*='twitter'],
