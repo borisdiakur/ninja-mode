@@ -3,6 +3,7 @@ function addNinjaMode() {
 
   const style = document.createElement('style')
   style.id = 'ninja-mode'
+  style.media = 'screen'
   style.innerText = `
     * {
       color-scheme: none !important;
