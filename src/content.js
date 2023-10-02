@@ -5,18 +5,18 @@ function addNinjaMode() {
   style.id = 'ninja-mode'
   style.media = 'screen'
   style.innerText = `
-    * {
+    html:not(.ninja-mode-fullscreen) * {
       color-scheme: none !important;
     }
-    :where(html) {
+    :where(html:not(.ninja-mode-fullscreen)) {
       color: black;
       background-color: white;
     }
-    html {
+    html:not(.ninja-mode-fullscreen) {
       filter: invert(0.9) hue-rotate(180deg) !important;
       color-scheme: dark !important;
     }
-    :is(
+    html:not(.ninja-mode-fullscreen) :is(
       img:not([src*='svg']),
       [role="img"]:not(:has(svg)),
       video,
@@ -83,6 +83,11 @@ chrome.runtime.onMessage.addListener((msg) => {
       updateNinjaMode()
       break
   }
+})
+
+document.addEventListener('fullscreenchange', () => {
+  const isFullscreen = document.fullscreenElement !== null
+  document.documentElement.classList.toggle('ninja-mode-fullscreen', isFullscreen)
 })
 
 updateNinjaMode()
