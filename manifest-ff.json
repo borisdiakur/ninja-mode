@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ninja-mode",
-  "description": "Extension for enabling dark mode on any website in Chromium based browsers.",
+  "description": "Browser extension for enabling dark mode on any website.",
   "version": "1.0",
   "background": {
     "scripts": ["src/background.js"]
