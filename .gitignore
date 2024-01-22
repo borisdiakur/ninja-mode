@@ -25,3 +25,5 @@ dist-ssr
 *.sw?
 
 *.afphoto
+build
+ninja-mode.zip

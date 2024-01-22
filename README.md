@@ -2,17 +2,30 @@
 
 <div align="center">
   <i>Dark mode enabled</i><br>
-  <i>In Chromium based browsers</i><br>
-  <i>A new extension</i>
+  <i>Finally, eyes at ease</i><br>
+  <i>Wandering the dusk</i>
 </div>
 
-### Installation:
+### Installation
+
+#### Chromium based browsers
 
 1. Download the source code of this repository.
 2. In your browser go to [chrome://extensions/](chrome://extensions/) or [opera://extensions/](opera://extensions/) or use the `Cmd/Ctrl Shift E` shortcut.
 3. Enable the "Developer Mode".
 4. Click the "Load Unpacked" button.
 5. Select the directory of the downloaded extension.
+
+#### Firefox and similar
+
+1. Download the source code of this repository.
+2. Run `mkdir -p build && cp -r src build/src && cp -r icons build/icons && cp manifest-ff.json build/manifest.json && cd build && zip -r -FS ../ninja-mode.zip *` inside the project root directory (on Windows you'll have to figure this one out by yourself).
+3. In your browser go to [about:config](about:config).
+4. Search for `xpinstall.signatures.required` and set it to `false`.
+5. Go to [about:addons](about:addons).
+6. Click the gearwheel and then on "Install Add-on From File".
+7. Select the `ninja-mode.zip` file in the project root directory.
+8. In the plugin settings, make sure the setting "Access your data for all websites" is enabled.
 
 ### How it works
 

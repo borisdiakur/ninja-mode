@@ -13,5 +13,8 @@
     "eslint": "^8.32.0",
     "prettier": "^2.8.3",
     "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "rm -rf build && mkdir -p build && cp -r src build/src && cp -r icons build/icons && cp manifest-ff.json build/manifest.json && cd build && zip -r -FS ../ninja-mode.zip *"
   }
 }
