@@ -18,7 +18,7 @@ function addNinjaMode() {
     }
     html:not(.ninja-mode-fullscreen) :is(
       img:not([src*='svg']),
-      [role="img"]:not(:has(svg)),
+      :not([data-mathml]) > [role="img"]:not(:has(svg)),
       [slot='image'],
       video,
       iframe[src*='youtube'],
