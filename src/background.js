@@ -16,7 +16,7 @@ const iconEnabled = {
   },
 }
 
-chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
+chrome.tabs.onUpdated.addListener(async (_tabId, changeInfo) => {
   try {
     if (!['loading', 'complete'].includes(changeInfo.status)) return
     const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true })
@@ -24,7 +24,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
     if (url && url.startsWith('http')) {
       await chrome.tabs.sendMessage(tab.id, { action: 'ninja-mode-update' })
     } else {
-      await chrome.action.setIcon(iconDefault)
+      chrome.action.setIcon(iconDefault)
     }
   } catch (err) {
     console.trace(err)
@@ -38,7 +38,7 @@ chrome.tabs.onActivated.addListener(async () => {
     if (url.startsWith('http')) {
       await chrome.tabs.sendMessage(tab.id, { action: 'ninja-mode-update' })
     } else {
-      await chrome.action.setIcon(iconDefault)
+      chrome.action.setIcon(iconDefault)
     }
   } catch (err) {
     console.trace(err)
@@ -61,9 +61,9 @@ chrome.runtime.onMessage.addListener(async (msg) => {
     if (msg.data.hostname !== new URL(url).hostname) return
 
     if (msg.data.enabled) {
-      await chrome.action.setIcon(iconEnabled)
+      chrome.action.setIcon(iconEnabled)
     } else {
-      await chrome.action.setIcon(iconDefault)
+      chrome.action.setIcon(iconDefault)
     }
   }
 })

@@ -5,5 +5,5 @@
     "allowJs": true,
     "lib": ["es2021", "dom"]
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "build"]
 }

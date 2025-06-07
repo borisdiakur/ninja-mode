@@ -13,7 +13,7 @@ function addNinjaMode() {
       background-color: white;
     }
     html:not(.ninja-mode-fullscreen) {
-      filter: invert(0.9) hue-rotate(180deg) !important;
+      filter: invert(0.95) hue-rotate(180deg) !important;
       color-scheme: dark !important;
     }
     html:not(.ninja-mode-fullscreen) :is(
@@ -21,6 +21,7 @@ function addNinjaMode() {
       :not([data-mathml]) > [role="img"]:not(:has(svg)),
       [slot='image'],
       video,
+      iframe[allowfullscreen],
       iframe[src*='youtube'],
       iframe[src*='twitter'],
       iframe[src*='vimeo'],
@@ -34,6 +35,7 @@ function addNinjaMode() {
       iframe[src*='ustream'],
       iframe[src*='hulu'],
       image,
+      rt-img,
       [style*='background-image: url']:not([style*='data:image/gif'],
       [style*='data:image/svg']),
       [style*='background: url']:not([style*='data:image/gif'],
